@@ -1,0 +1,24 @@
+{
+    "Virtual Interface": "ens38",
+    "CIDR Notation":"127.0.0.1/24",
+    "Nodes":
+    [
+    {
+        "Name":{"Master":"Master", "Outstation":"OutStation"},
+        "DNP3 Address":{"Master":95, "Outstation":20},
+        "Lua File":{"Outstation":["BasicSample1.lua"]},
+        "Allow Unsolicited": false,
+        "Data":
+        [
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index List":"0-9", "Deadband":"1"},
+            {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index List":"0-9"}
+        ],
+        "Poll Interval":
+        [
+            {"Event Class":"0123", "Frequency":3}
+        ]
+    }
+
+    ]
+
+}

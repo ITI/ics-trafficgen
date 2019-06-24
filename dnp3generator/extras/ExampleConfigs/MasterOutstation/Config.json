@@ -1,0 +1,47 @@
+{
+    "Nodes":
+    [
+        {
+            "Name":{"Master":"MasterStationOne"},
+            "DNP3 Address":{"Master":90, "Outstation":95},
+            "IP Address":{"Master":"172.16.136.131", "Outstation":"172.16.136.130"},
+            "Lua File":{"Master":["M1_Example_Smart_Reading.lua"]},
+            "Poll Interval":
+            [
+                {"Event Class":"0123", "Frequency":20}
+            ]
+        },
+        {
+            "Name":{"Outstation": "OutStationOne"},
+            "DNP3 Address":{"Outstation":95, "Master":90},
+            "IP Address":{"Outstation":"172.16.136.130"},
+            "Lua Switch Trigger":{"Outstation":"k"},
+            "Lua File":{"Outstation":["BasicSample1.lua", "BasicSample2.lua"]},
+            "Allow Unsolicited": false,
+            "Data":
+            [
+                {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":0, "Deadband":1},
+                {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":1, "Deadband":0.5},
+                {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":2, "Deadband":0.75},
+                {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":3, "Deadband":1},
+                {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":4, "Deadband":1},
+                {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":5, "Deadband":1},
+                {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":6, "Deadband":1},
+                {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":7, "Deadband":1},
+                {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":8, "Deadband":1},
+                {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":9, "Deadband":1},
+                {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":0},
+                {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":1},
+                {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":2},
+                {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":3},
+                {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":4},
+                {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":5},
+                {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":6},
+                {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":7},
+                {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":8},
+                {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":9}
+            ]
+        }
+
+    ]
+}

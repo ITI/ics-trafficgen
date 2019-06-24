@@ -1,0 +1,67 @@
+
+The Config file is in json format. The default config file is Config.json. You can run the application with your json file using the -c flag.
+The top level keys in the JSON file are
+
+"Virtual Interface"
+"CIDR Notation"
+"Nodes"
+
+The "Virtual Interface" and "CIDR Notation" keys are useful for development, testing and running a simulated DNP3 flow on a single VM.
+
+Nodes is a list of nodes (master outstation pair). The top level keys of a node are
+"Name"
+""IP Address"
+"DNP3 Address"
+"IP Port"
+"Allow Unsolicited"
+"Data"
+"Poll Interval"
+
+For the key "Name" if you want to create a simulated Master station, add the value as shown below
+    "Name":{"Master":"MasterStationName"} This is used for a simulated Master that is going to talk to a real outstation device.
+If you want to simulate an Outstation, use the key value
+    "Name":{"Outstation":"SimulatedOutstationName"}
+If you want to simulate both a Master and an outstation, Use
+    "Name":{"Master":"MasterName", "Outstation":"OutstationName"}
+    In this case you can use the top level keys "Virtual Interface", and "CIDR Notation" to allow the software to pick the
+    virtual network interface card and IP addresses automatically.
+
+Use "IP Address" as shown below to specify the IP addresses of the master and the outstation.
+If this is for a simulated Master talking to a simulated/real outstation, both keys are necessary.
+You can use just the Outstation key if you are simulating an outstation.
+    "IP Address": {"Master":"192.168.3.1", "Outstation":"192.168.8.2"}
+
+The "DNP3 Address" is used to specify the DNP3 address as set on the physical device as
+    "DNP3 Address": {"Master":5, "Outstation":3}
+    If you are simulating both master and outstation(in a VM), you can partially specify or skip specifying DNP3 addresses altogether,
+    the software will allocate unique addresses and connect them.
+    Otherwise both DNP3 addresses should be specified to ensure proper connection.
+
+The "IP Port" defaults to port 20000 for the master and outstation, use the format as shown below if you want to change one or both ports
+    "IP Port":{"Master":20001, "Outstation":19204}
+
+The "Allow Unsolicited" sets the Allow Unsolicited flag on the station being configured. A value of true means the outstation will send data
+to the master as it becomes available, instead of holding on to the data until the master polls for it.
+
+The "Data" key is useful when you are creating a simulated Outstation. It is used to specify the type and size of the data being generated.
+    "Data":
+        [
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":1, "Index":3}
+        ]
+        The currently allowed types are "Analog Input", "Binary Input", and "Counter".
+        Additional types can be added as needed. The "Event Class", "sVariation", "eVariation" are DNP3 specific, look up DNP3 documentation.
+        The "Index" specifies the index of the point created. The data is updated through a Lua script(Lua version 5.2).
+        - The program calls the Lua script for an outstation once every millisecond.
+        - The Lua script MUST have the same name as the outstation. i.e. it must be of the form OutstationName.lua
+        - The lua function MUST be named generate_data.
+        - The data returned by the script MUST be a nested table with the table named "data", the inner tables are named "Analog Input", "Binary Input", "Counter".
+        The script can return an empty table (no values are updated), or just one or more of the inner tables. However all values must be returned. i.e. Any mismatch
+        between the "Index" specified in the config file and the number of values returned by the script may lead to undefined results.The "data" table may also contain
+        a variable named "Timestamp". This can be used to return a delay time. This is currently not used.
+
+The "Poll Interval" key specifies the rate at which the Master will poll the outstation.
+    "Poll Interval":
+    [
+        {"Event Class":2, "Frequency":15}
+    ]
+    Here we are setting up a poll of all Class 2 events at a frequency of 15 seconds. An event class of "0123" will start a Integrity poll at the frequency specified.

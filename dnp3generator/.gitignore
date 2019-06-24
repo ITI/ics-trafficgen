@@ -1,0 +1,10 @@
+*.o
+objs/*.o
+dnp3Generator
+tests/dnp3GenTest
+.vscode/
+/*.lua
+/*.json
+/*.gdb_history
+/*.swp
+

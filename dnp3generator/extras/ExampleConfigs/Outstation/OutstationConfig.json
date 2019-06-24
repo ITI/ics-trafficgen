@@ -1,0 +1,17 @@
+{
+    "Nodes":
+    [
+        {
+            "Name":{"Outstation": "Outstation"},
+            "DNP3 Address":{"Master":7, "Outstation":6},
+            "IP Address":{"Outstation":"192.168.1.4"},
+            "Lua File":{"Outstation":["BasicSample1.lua"]},
+            "Allow Unsolicited": false,
+            "Data":
+            [
+            	{"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index List":"0-9"},
+            	{"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index List":"0-9"}
+            ]
+        }
+    ]
+}

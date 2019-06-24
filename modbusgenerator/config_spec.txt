@@ -1,0 +1,44 @@
+The Config file is in json format. The default config file is Config.json. You can run the application with your json file using the -c flag.
+The top level keys in the JSON file are
+
+"Virtual Interface"
+"CIDR Notation"
+"Master Nodes"
+"Outstation1"
+"Outstation2"
+...
+
+The "Virtual Interface" and "CIDR Notation" keys are useful for development, testing and running a simulated modbus flow on a single VM.
+
+The "Master Nodes" is a list of nodes that represent masters.
+    Each master node contains the keys
+    "Name"
+    "Outstations": A list of names of outstations that this master is connected to.
+    "Poll Interval"
+
+    "Poll Interval" contains a list of data types and the frequency (in seconds) by which the master will poll ALL the outstations connected to it.
+        The "Data Type" can have values
+        "Coils"
+        "Discretes Input"
+        "Input Registers"
+        "Holding Registers"
+
+        "Frequency": The number of seconds after which to poll all the outstations.
+
+The "Outstation1" node contains the keys
+    "Data Count"
+    "Unit ID"
+    "Simulate"
+    "IP Address"
+    "Port"
+
+    "Data Count" is the only required key. This allows us to set up the correctly sized data blocks. Currently we set up the same sizes blocks
+    for coils, registers, holding registers, and discrete inputs.
+    "IP Address" is used to specify the IP address at which this outstation is located.
+    "Unit ID" is required if multiple outstations are located at the same IP address.
+    "Simulate" has a default value of True. Set it to False if we are connecting to a real device.
+    "Port" has a default value of 502. Specify it if you have a non default port.
+
+The program calls the Lua (version 5.2) script associated with an outstation(Outstation1.lua) once every second. The function MUST be called "generate_data".
+The expected output of this function is a nested table called data. The nested tables have the keys "Coils", "Discretes Input", "Input Registers", and "Holding Registers".
+The tables can be empty if you don't want any new values generated for that data type. The size of the subtable has to match the data size specified in "Data Count".

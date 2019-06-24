@@ -1,0 +1,12 @@
+attrs==16.3.0
+Automat==0.5.0
+constantly==15.1.0
+incremental==16.10.1
+ipaddress==1.0.18
+netaddr==0.7.19
+netifaces==0.10.5
+pycrypto==2.6.1
+pyserial==3.2.1
+six==1.10.0
+Twisted==17.1.0
+zope.interface==4.3.3

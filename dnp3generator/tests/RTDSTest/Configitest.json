@@ -1,0 +1,74 @@
+{
+    "Virtual Interface": "eth1",
+    "CIDR Notation":"192.168.90.1/24",
+    "Nodes":
+    [
+        {"Name":{"Master":"M1", "Outstation": "RTDSitest"},
+        "DNP3 Address":{"Master":95},
+        "Allow Unsolicited": false,
+        "Data":
+        [
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":0, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":1, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":2, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":3, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":4, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":5, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":6, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":7, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":8, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":9, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":10, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":11, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":12, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":13, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":14, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":15, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":16, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":17, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":18, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":19, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":20, "Deadband":"3.985"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":21, "Deadband":"0.75"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":22, "Deadband":"0.5"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":23, "Deadband":"0.5"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":24, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":25, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":26, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":27, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":28, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":29, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":30, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":31, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":32, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":33, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":34, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":35, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":36, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":37, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":38, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":39, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":40, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":41, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":42, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":43, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":44, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":45, "Deadband":"10000000"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":46, "Deadband":"0.75"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":47, "Deadband":"0.75"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":48, "Deadband":"0.5"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":49, "Deadband":"0.5"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":50, "Deadband":"0.001"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":51, "Deadband":"0.001"},
+            {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index List":"0-25"}
+        ],
+        "Poll Interval":
+        [
+            {"Event Class":"0123", "Frequency":5},
+            {"Event Class":2, "Frequency":2},
+            {"Event Class":1, "Frequency":1}
+
+        ]
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+dnp3Generator /usr/bin
+extras/ExampleConfigs/SimulatedPair/Config.json /etc/dnp3
+extras/ExampleConfigs/LuaConfigs/BasicSample1.lua /etc/dnp3
+#extras/ /etc/dnp3

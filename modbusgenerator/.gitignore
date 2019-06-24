@@ -1,0 +1,6 @@
+__pycache__/*
+pymodbus/*
+dist/*
+build/*
+*.tar.gz
+*.spec

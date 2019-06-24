@@ -1,0 +1,50 @@
+-------------------------------------------------------------------------------
+-Mapping Outstation Example
+-------------------------------------------------------------------------------
+
+This example creates a mapped master/outstation configuration acting as a
+multiplexer to aggregate values into a single station.
+
+Example:
+
+Aggregated Values
+------------------
+|1:a             |
+|2:b             |
+|3:c             |
+|4:d             |
+|5:e             |
+|6:f             |
+------------------
+  |             |
+  |             |
+
+Station A   Station B
+------      ------
+1:a          4:d
+2:b          5:e
+3:c          6:f
+
+
+To run this example, compile dnp3Generator, and execute with "Config.json" and specified lua file
+which should be located in ../LuaConfigs
+
+Here OutStationTwo has two Lua files defined as:
+            "Lua File":{"Outstation":["BasicSample1.lua", "BasicSample2.lua"]},
+Which are switched using the trigger key "k"
+            "Lua Switch Trigger":{"Outstation":"k"},
+
+
+Aggregation and Mapping is performed by OutStationOne
+
+The "Data Source" refers to which outstation (Station A or Station B) we are currently referencing for the mapping.
+
+The"InputIndex" is defining the external index we are referencing and "Index" refers to how we are to aggregate it as seen above:
+                   Example:
+                    {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "InputIndex":0, "Index":0, "Deadband":"1"},
+                    {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "InputIndex":0, "Index":0},
+
+We further manipulate the values given to us by InputIndex using a lua script as defined by:
+            "Lua File":{"Master":["MS1_Multiplexer_Example_InjectValues.lua"]},
+
+Finally MasterStation MM Polls these aggregated values from OutStationOne every 30 seconds

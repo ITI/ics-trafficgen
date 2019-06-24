@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+-Outstation Example
+-------------------------------------------------------------------------------
+
+In this example configuration we create an outstation and tie it with a lua
+file to generate values.
+
+To run this example, compile dnp3Generator, and execute with "Config.json" and specified lua file
+which should be located in ../LuaConfigs

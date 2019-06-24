@@ -1,0 +1,20 @@
+{
+    "Virtual Interface": "ens33",
+    "CIDR Notation":"172.16.136.1/24",
+    "Master Nodes":
+    [
+        {"Name":"M1",
+        "Outstations":["S1", "S2"],
+        "Simulate":false,
+        "Poll Interval":
+        [
+            {"Data type":"Discretes Input", "Frequency":5},
+            {"Data type":"Coils", "Frequency":8},
+            {"Data type":"Input Registers", "Frequency":2},
+            {"Data type":"Holding Registers", "Frequency":10}
+        ]
+    }
+    ],
+    "S1":{"Data Count":7, "Unit ID":1},
+    "S2":{"Data Count":5, "Unit ID":2}
+}

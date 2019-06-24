@@ -1,0 +1,34 @@
+###
+###Running DNP3 from Automatak
+###
+###
+---------------------------------------------------------------------------------------
+To install the open dnp3 libraries, asiodnp3, asiopal, opendnp3, openpal
+
+sudo apt-get install libboost-all-dev liblua5.2-dev
+git clone --recursive https://github.com/automatak/dnp3.git
+git checkout 1a82d7b1d745412bd343f59033eec820f1c46201 .
+
+cmake ../dnp3
+make -j
+sudo make install
+---------------------------------------------------------------------------------------
+If you want to run the demo's supplied with the libraries
+Go to dnp3_master and dnp3_slave and do:
+make
+
+for dnp3_slave, the source files changed for database.h (prepended an I to the library)
+You will have to do:
+sudo ln -s IDatabase.h /usr/local/include/opendnp3/outstation/Database.h
+sudo ldconfigsudo ldconfig
+
+The files are pretty much all based on the examples provided by automatak
+---------------------------------------------------------------------------------------
+To create the ITI dnp3Generator executable for Ubuntu 64 bit, ver 16.04 LTS
+cd dnp3Generator
+make clean
+make
+sudo ./dnp3Generator
+
+For the orion LX box which is Ubuntu 32 bit, use
+make sorion

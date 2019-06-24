@@ -1,0 +1,24 @@
+{
+    "Virtual Interface": "ens38",
+    "CIDR Notation":"192.168.81.1/25",
+    "Master Nodes":
+    [
+        {"Name":"M1",
+        "Outstations":["S1", "S2"],
+        "Simulate":false,
+        "Poll Interval":
+        [
+            {"Data type":"Discretes Input", "Frequency":5},
+            {"Data type":"Coils", "Frequency":8},
+            {"Data type":"Input Registers", "Frequency":2},
+            {"Data type":"Holding Registers", "Frequency":10}
+        ]
+    },
+    {"Name":"M2",
+    "Outstations":["S3"]
+    }
+    ],
+    "S1":{"Data Count":7, "Unit ID":1},
+    "S2":{"Data Count":5, "Unit ID":2},
+    "S3":{}
+}

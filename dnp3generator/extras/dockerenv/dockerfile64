@@ -1,0 +1,21 @@
+FROM ubuntu:xenial
+ARG DEBIAN_FRONTEND=noninteractive 
+RUN apt-get update 
+RUN apt-get install -y apt-utils
+RUN apt-get install -y sudo
+RUN apt-get install -y net-tools
+RUN apt-get install -y git
+RUN apt-get install -y g++
+RUN apt-get install -y cmake
+RUN apt-get install -y libboost-all-dev
+RUN apt-get install -y liblua5.2-dev
+RUN apt-get install -y tshark
+RUN apt-get install -y tcpdump
+RUN git clone --recursive https://github.com/automatak/dnp3.git
+WORKDIR /dnp3
+RUN git checkout 1a82d7b1d745412bd343f59033eec820f1c46201 .
+RUN cmake ../dnp3
+RUN make
+RUN make install
+RUN ldconfig
+ARG DEBIAN_FRONTEND=teletype

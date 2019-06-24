@@ -1,0 +1,12 @@
+Source: dnp3generator
+Section: misc
+Priority: extra
+Maintainer: Steve Granda <sgrand2@illinois.edu>
+Build-Depends: debhelper (>= 9.0.0)
+Standards-Version: 3.9.3
+Homepage: http://iti.illinois.edu
+
+Package: dnp3generator
+Architecture: any
+Description: DNP3 Traffic Generator
+ Traffic Generator based on Automatak OpenDNP3  

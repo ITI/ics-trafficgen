@@ -1,0 +1,29 @@
+-------------------------------------------------------------------------------
+-Simulated Pair Example
+-------------------------------------------------------------------------------
+
+In this example configuration we simulate a simple Master/Outstation.
+
+To run this example, compile dnp3Generator, and execute with "Config.json". The specified lua file
+is be located in ../LuaConfigs. make sure the path to the lua file is correct in the Config file.
+
+This example uses:
+    "Lua File":{"Outstation":["BasicSample1.lua"]}
+The DNP3Generator will look for BasicSample1.lua (copy located in ../LuaConfigs) to generate values for OutStationOne
+
+To further expand this, a master station can also have a lua file
+The JSON would look similar to:
+    "Lua File":{"Outstation":["BasicSample1.lua"], "Master":["MasterStationExample.lua"]}
+
+If needed multiple lua files can be switched for each Outstation and/or Master Instance using specified key triggers.
+The JSON to specify Multiple Lua Files looks like:
+    "Lua File":{"Outstation":["BasicSample1.lua", "AnotherLuaFileExample.lua"]}
+
+Then a trigger would be specified in the JSON via:
+    "Lua Switch Trigger":{"Outstation":"letter or string to switch Outstation lua file","Master":"letter or string to switch Master lua file"}
+
+The paired Outstation and Master can specify lua files for both
+"Lua File":{"Master":["M1_Example_Smart_Reading.lua", "Another_Sample_File.lua"], "Outstation":["ExampleFile1.lua","ExampleFile2.lua"]},
+"Lua Switch Trigger":{"Master":"l","Outstation":"j"},
+
+The switch trigger key can also be a string instead of a character.

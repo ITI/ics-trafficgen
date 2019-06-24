@@ -1,0 +1,17 @@
+{
+	"Nodes":
+	[
+		{"Name":{"Master":"ControlHost"},
+		"IP Address":{"Outstation":"192.168.1.4","Master":"192.168.1.90"},
+		"DNP3 Address":{"Master":7, "Outstation":6},
+		"IP Port":{"Master":20000},
+		"Allow Unsolicited": false,
+		"Poll Interval":
+		[
+				{"Event Class":1, "Frequency":5},
+				{"Event Class":2, "Frequency":7},
+				{"Event Class":0, "Frequency":20}
+		]
+		}
+	]
+}

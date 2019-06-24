@@ -1,0 +1,52 @@
+{
+    "Virtual Interface": "ens38",
+    "CIDR Notation":"172.16.136.1/24",
+    "Nodes":
+    [
+    {
+        "Name":{"Master":"MasterStationOne", "Outstation":"OutStationOne"},
+        "DNP3 Address":{"Master":95, "Outstation":20},
+        "Lua File":{"Outstation":["BasicSample1.lua"]},
+        "Allow Unsolicited": false,
+        "Data":
+        [
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":0, "Deadband":"1"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":1, "Deadband":"1"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":2, "Deadband":"1"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":3, "Deadband":"1"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":4, "Deadband":"1"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":5, "Deadband":"1"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":6, "Deadband":"1"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":7, "Deadband":"1"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":8, "Deadband":"1"},
+            {"Type":"Analog Input", "Event Class":2, "sVariation":5, "eVariation":7, "Index":9, "Deadband":"1"},
+            {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":0},
+            {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":1},
+            {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":2},
+            {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":3},
+            {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":4},
+            {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":5},
+            {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":6},
+            {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":7},
+            {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":8},
+            {"Type":"Binary Input", "Event Class":1, "sVariation":1, "eVariation":1, "Index":9}
+        ],
+        "Event Data":
+        [
+            {"Type":"Analog Input", "Size":100},
+            {"Type":"Binary Input", "Size":200},
+            {"Type":"Double Binary Input", "Size":300},
+            {"Type":"Counter", "Size":400},
+            {"Type":"Frozen Counter", "Size":500},
+            {"Type":"Binary Counter", "Size":600},
+            {"Type":"Analog Output", "Size":700}
+        ],
+        "Poll Interval":
+        [
+            {"Event Class":"0123", "Frequency":3}
+        ]
+    }
+
+    ]
+
+}
