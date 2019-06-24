@@ -8,5 +8,5 @@ netifaces==0.10.5
 pycrypto==2.6.1
 pyserial==3.2.1
 six==1.10.0
-Twisted==17.1.0
+Twisted==19.2.1
 zope.interface==4.3.3
